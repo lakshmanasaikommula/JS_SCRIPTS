@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="knockout-3.5.1.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+
+    <style>
+        .text1,
+        .text2 {
+            margin-top: 20px;
+            text-align: center;
+
+        }
+
+        div.wrapper {
+            border: 1px solid black;
+            padding-bottom: 20px;
+            padding-left: 450px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <p> FirstName: <input class="text1" type="text" name="firstName" /></p>
+        <p>LastName: <input class="text2" type="text" name="lastName" /></p>
+    </div>
+
+    <p> FullName: <input data-bind="value: Name" /></p>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#128516</h1>
+            </div>
+
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#128578</h1>
+            </div>
+
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#128525</h1>
+            </div>
+
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#129324</h1>
+            </div>
+
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#128514</h1>
+            </div>
+
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#128520</h1>
+            </div>
+
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#129313</h1>
+            </div>
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#128564</h1>
+            </div>
+            <div class="col-sm-4">
+                <h1><span data-bind="text: Name1" /></h1>
+                <h1>&#129297</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function view() {
+            this.Name = "Lakshman_Kommula"
+            this.Name1 = 'I am Feeling Like'
+
+        }
+        ko.applyBindings(new view());
+
+        var myObservable = ko.observable();
+        myObservable('Hello');
+        alert(myObservable());
+
+        var myObservableArray = ko.observableArray([]);
+        myObservableArray.push('Hello');
+
+        self.firstName = ko.observable('Steve');
+        self.lastName = ko.observable('Kennedy');
+        self.fullName = ko.computed(function () {
+            return 'Hello ' + self.firstName() + ' ' + self.lastName();
+        });
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+<* TABLE ( SELECT ListPrice FROM STRATEGICLISTPRICE WHERE RevenueType = '<* TABLE ( SELECT RT FROM RT ) *>' AND BitType = '<* TABLE ( SELECT PG FROM PG ) *>' AND Cast (BitSize AS float) = '<* TABLE ( SELECT BD FROM BD ) *>' ) *>

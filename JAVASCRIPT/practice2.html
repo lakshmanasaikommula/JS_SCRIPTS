@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="knockout-3.5.1.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <tr>
+        <td>Batch :</td>
+        <td><input data-bind="value: Batch" /></td>
+        <td><span data-bind="text: Batch" /></td>
+    </tr>
+    <tr>
+        <td>Address :</td>
+        <td><input data-bind="value: Address" /></td>
+        <td><span data-bind="text: Address" /></td>
+    </tr>
+    <tr>
+        <td>Class :</td>
+        <td><input data-bind="value: Class" /></td>
+        <td><span data-bind="text: Class" /></td>
+    </tr>
+
+
+    <script>
+
+        var self = this;
+        self.Batch = ko.observable();
+        self.Address = ko.observable();
+        self.Class = ko.observable(); 
+    </script>
+
+
+</body>
+
+</html>

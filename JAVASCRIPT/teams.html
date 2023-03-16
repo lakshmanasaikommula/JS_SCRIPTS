@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="knockout-3.5.1.js"></script>
+    <script src="jquery-3.6.1.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <p>Day: <input data-bind="value: day" /></p>
+    <p>Month: <input data-bind="value: month" /></p>
+    <p>Year: <input data-bind="value: year" /></p>
+
+    
+    <p>The current date is <span data-bind="text: fullDate"></span></p>
+
+    <script>
+
+        function viewModel() {
+            var self = this;
+            self.day = ko.observable('24');
+            self.month = ko.observable('02');
+            self.year = ko.observable('2012');
+
+            self.fullDate = ko.computed(function () {
+                return self.day() + "/" + self.month() + "/" + self.year();
+            });
+        };
+
+        ko.applyBindings(new viewModel());
+    </script>
+
+
+
+</body>
+
+</html>

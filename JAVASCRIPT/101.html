@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello all</h1>
+    <p id="demo"></p>
+    <button onclick="document.getElementById('demo'),innerHTML = Date()">Click Me</button>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <button
+        onclick="document.getElementById('myImage').src='https://toppng.com/uploads/preview/light-bulb-on-off-png-11553940319kdxsp3rf0i.png'">Turn
+        on the light</button>
+
+    <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+    <button
+        onclick="document.getElementById('myImage').src='https://www.citypng.com/public/uploads/preview/hd-light-bulb-on-off-png-31626305624ofqq78jchu.png'">Turn
+        off the light</button>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Click Me!</button>
+
+    <button type="button" onclick="document.getElementById('demo').style.display='none'">Click Me!</button>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can show hidden HTML elements.</p>
+
+    <p id="demo" style="display:none">Hello JavaScript!</p>
+
+    <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
+    function myFunction() {
+    document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+    </script>
+    </head>
+
+    <body>
+        <h2>Demo JavaScript in Head</h2>
+
+        <p id="demo">A Paragraph</p>
+        <button type="button" onclick="myFunction()">Try it</button>
+
+        
+
+    </body>
+
+</html>
